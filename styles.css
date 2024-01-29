@@ -1,16 +1,23 @@
 /*  your css code here. If applicable */
 body{
-	display: flex;
-	align-items: center;
+	background-color: mediumpurple;
+	
+}
+#buttons{
+	display:flex;
+	top: 50%;
+	left: 50%;
+	
 	justify-content: center;
-	background-color: #a164df;
-	gap: 20px
+	align-items:center;
 }
 .btn, .stop{
-	margin-top: 50px;
+	background-color:rebeccapurple;
+	width: 10%;
 	color: white;
-	background-color: #663399;
-	padding: 10px 20px;
+	text-align:center;
+	padding: 10px;
 	border: none;
+	margin: 20px;
 	border-radius: 5px;
 }
