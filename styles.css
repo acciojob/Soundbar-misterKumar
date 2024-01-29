@@ -1,15 +1,16 @@
 /*  your css code here. If applicable */
-#buttons {
-	background-color :#a164df; 
-/* 	width: 100%; */
-	padding: 50px;
+body{
 	display: flex;
-	justify-content: space-between;
+	align-items: center;
+	justify-content: center;
+	background-color: #a164df;
+	gap: 20px
 }
-
-.btn {
-	background-color: #663399;
-	padding: 15px;
-	border: none;
+.btn, .stop{
+	margin-top: 50px;
 	color: white;
+	background-color: #663399;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
 }

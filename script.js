@@ -1,18 +1,41 @@
 //your JS code here. If required.
-function playAudio(audioId) {
-	const audio = new Audio(`/sounds/${audioId}.mp3`);
-	audio.play();
+const audio = document.createElement("audio");
+function playAudio(btnRef){
+	let currentBtnId = btnRef.id;
+	switch(currentBtnId){
+			case "applause":
+			console.log("applauseBtnClicked");
+			audio.src = "./sounds/applause.mp4";
+			audio.play();
+			break;
+			
+			case "boo":
+			audio.src = "./sounds/boo.mp4";
+			audio.play();
+			break;
+			
+			case "gasp":
+			audio.src = "./sounds/gasp.mp4";
+			audio.play();
+			break;
+			
+			case "tada":
+			audio.src = "./sounds/tada.mp4";
+			audio.play();
+			break;
+			
+			case "victory":
+			audio.src = "./sounds/victory.mp4";
+			audio.play();
+			break;
+			
+			case "wrong":
+			audio.src = "./sounds/wrong.mp4";
+			audio.play();
+			break;
+			
+			case "stop":
+			audio.pause();
+			break;
+	}
 }
-
-document.querySelectorAll(`.btn`).forEach(function (button) {
-	button.addEventListener("click", function () {
-		if (this.id === 'applause' || this.id === 'boo' || this.id === 'gasp' || this.id === 'tada' || this.id === 'victory' || this.id === 'wrong') {
-			playAudio(this.id);
-		} else if(this.classList.contains('stop')){
-			document.querySelectorAll('audio').forEach(function(audio) {
-                audio.pause();
-                audio.currentTime = 0;
-            });)
-		}
-	});
-});
